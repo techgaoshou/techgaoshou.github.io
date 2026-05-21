@@ -102,6 +102,11 @@ const nodes = [
 let tick = 0;
 let canvasCssWidth = 720;
 let canvasCssHeight = 520;
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+function shouldAnimateSignal() {
+  return window.innerWidth > 680 && !reducedMotion.matches;
+}
 
 function resizeSignalCanvas() {
   const rect = canvas.getBoundingClientRect();
@@ -114,12 +119,15 @@ function resizeSignalCanvas() {
 }
 
 resizeSignalCanvas();
-window.addEventListener("resize", resizeSignalCanvas);
+window.addEventListener("resize", () => {
+  resizeSignalCanvas();
+  if (!shouldAnimateSignal()) drawSignal();
+});
 
 function drawSignal() {
   const width = canvasCssWidth;
   const height = canvasCssHeight;
-  tick += 0.012;
+  tick += shouldAnimateSignal() ? 0.012 : 0;
   ctx.clearRect(0, 0, width, height);
 
   ctx.strokeStyle = "rgba(255, 248, 232, 0.16)";
@@ -161,7 +169,7 @@ function drawSignal() {
     else ctx.lineTo(x, y);
   }
   ctx.stroke();
-  requestAnimationFrame(drawSignal);
+  if (shouldAnimateSignal()) requestAnimationFrame(drawSignal);
 }
 
 drawSignal();
