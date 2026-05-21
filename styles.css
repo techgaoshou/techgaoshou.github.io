@@ -209,27 +209,8 @@ h3 {
   gap: 0.75rem;
 }
 
-.hero-creator {
-  margin: 0 0 1.1rem;
-}
-
-.hero-creator span {
-  display: grid;
-  line-height: 1.25;
-}
-
-.hero-creator strong {
-  color: var(--text);
-  font-size: 1rem;
-}
-
-.hero-creator small {
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
 .social-ribbon {
-  margin-top: 1.4rem;
+  margin-top: 1rem;
 }
 
 .social-link {
