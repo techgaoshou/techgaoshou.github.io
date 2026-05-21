@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>高手科技 | AI 技术与美股投资小白教程</title>
+    <meta
+      name="description"
+      content="高手科技是面向小白的 AI 技术与美股投资教程站。高老师手把手教你玩科技，学会 AI 工具、自动化、海外账户、美股 ETF 与长期投资。"
+    />
+    <meta name="theme-color" content="#101820" />
+    <meta property="og:title" content="高手科技 | 高老师手把手教你玩科技" />
+    <meta property="og:description" content="AI 技术与美股投资小白教程：图文、视频、工具和学习路线。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://techgaoshou.com/" />
+    <meta property="og:image" content="https://techgaoshou.com/assets/techgaoshou-avatar.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://techgaoshou.com/assets/techgaoshou-avatar.png" />
+    <link rel="canonical" href="https://techgaoshou.com/" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/techgaoshou-avatar.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "高手科技",
+        "alternateName": "Tech GaoShou",
+        "url": "https://techgaoshou.com/",
+        "description": "AI 技术与美股投资小白教程",
+        "sameAs": ["https://x.com/techgaoshou", "https://www.youtube.com/@techgaoshou"]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="高手科技首页">
+        <img class="brand-avatar" src="./assets/techgaoshou-avatar.png" alt="" />
+        <span>
+          <strong>高手科技</strong>
+          <small>@techgaoshou</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#paths">学习路线</a>
+        <a href="#articles">图文教程</a>
+        <a href="#videos">视频课</a>
+        <a href="#tools">工具</a>
+        <a href="#about">关于</a>
+      </nav>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="切换深浅色">◐</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">AI 技术 · 美股投资 · 小白教程</p>
+          <h1>高老师手把手教你，把 AI 和投资真正用起来。</h1>
+          <p class="hero-text">
+            从注册工具、搭建自动化，到看懂 ETF、券商入门和长期定投。每篇教程都按“照着做就能完成”的方式写，适合刚开始认真学习科技和投资的人。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#paths">选择学习路线</a>
+            <a class="secondary-action" href="#articles">看最新教程</a>
+          </div>
+          <div class="hero-stats" aria-label="站点内容规划">
+            <span><strong>2</strong> 条主线</span>
+            <span><strong>6</strong> 个入门主题</span>
+            <span><strong>图文 + 视频</strong> 双发布</span>
+          </div>
+          <div class="creator-strip">
+            <img src="./assets/techgaoshou-avatar.png" alt="高手科技头像" />
+            <span>高手科技 · @techgaoshou</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="AI 与投资知识地图">
+          <canvas id="signalCanvas" width="720" height="520"></canvas>
+          <div class="signal-panel">
+            <span>本周行动面板</span>
+            <strong>先学 AI 工作流，再建长期投资系统</strong>
+            <small>新手优先：ChatGPT / Claude / ETF / 券商 / 定投</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-start" aria-label="新手入口">
+        <div class="section-heading">
+          <p class="eyebrow">Start Here</p>
+          <h2>你现在想解决什么问题？</h2>
+        </div>
+        <div class="intent-grid">
+          <a href="#articles" data-filter-link="AI工具">
+            <span>AI</span>
+            <strong>我要学 AI 工具</strong>
+            <small>ChatGPT、Claude、提示词、资料整理</small>
+          </a>
+          <a href="#articles" data-filter-link="自动化">
+            <span>Auto</span>
+            <strong>我要做自动化</strong>
+            <small>工作流、脚本、知识库、效率系统</small>
+          </a>
+          <a href="#articles" data-filter-link="美股投资">
+            <span>US</span>
+            <strong>我要开始美股</strong>
+            <small>券商、ETF、指数、长期定投</small>
+          </a>
+          <a href="#articles" data-filter-link="出海工具">
+            <span>Go</span>
+            <strong>我要配置出海工具</strong>
+            <small>邮箱、手机号、域名、VPS、账户安全</small>
+          </a>
+        </div>
+      </section>
+
+      <section class="paths" id="paths">
+        <div class="section-heading">
+          <p class="eyebrow">Learning Paths</p>
+          <h2>两条长期主线，适合持续做内容</h2>
+          <p>把账号定位做窄一点：AI 是生产力，美股是资产配置。两条线都围绕“小白从 0 到 1”。</p>
+        </div>
+        <div class="path-layout">
+          <article class="path-card featured">
+            <div class="path-index">01</div>
+            <h3>AI 小白实战课</h3>
+            <p>从工具注册、模型选择、提示词，到用 AI 写作、做表格、读财报、剪视频。</p>
+            <ol>
+              <li>ChatGPT / Claude / Gemini 怎么选</li>
+              <li>用 AI 做个人知识库和资料整理</li>
+              <li>把重复工作交给自动化工作流</li>
+            </ol>
+          </article>
+          <article class="path-card">
+            <div class="path-index">02</div>
+            <h3>美股投资入门课</h3>
+            <p>不讲暴富神话，先讲账户、ETF、风险、现金流和长期纪律。</p>
+            <ol>
+              <li>券商开户和入金基础</li>
+              <li>指数 ETF 与 DCA 定投</li>
+              <li>怎样用 AI 辅助阅读研报和财报</li>
+            </ol>
+          </article>
+          <aside class="roadmap">
+            <span>内容节奏建议</span>
+            <strong>每周 2 篇图文 + 1 条视频</strong>
+            <p>图文负责 SEO 和细节，视频负责信任感和传播。每条视频都回链到博客文章。</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="articles" id="articles">
+        <div class="section-heading row">
+          <div>
+            <p class="eyebrow">Articles</p>
+            <h2>最新图文教程</h2>
+          </div>
+          <label class="search-box">
+            <span>搜索</span>
+            <input id="articleSearch" type="search" placeholder="AI、ETF、Claude、券商..." />
+          </label>
+        </div>
+        <div class="filters" aria-label="文章筛选">
+          <button class="filter active" type="button" data-filter="all">全部</button>
+          <button class="filter" type="button" data-filter="AI工具">AI工具</button>
+          <button class="filter" type="button" data-filter="自动化">自动化</button>
+          <button class="filter" type="button" data-filter="美股投资">美股投资</button>
+          <button class="filter" type="button" data-filter="出海工具">出海工具</button>
+        </div>
+        <div class="article-grid" id="articleGrid">
+          <article class="article-card" data-category="AI工具" data-title="Claude vs ChatGPT">
+            <a href="./articles/claude-vs-chatgpt.html" class="article-link">
+              <span class="tag">AI工具</span>
+              <h3>Claude vs ChatGPT：2026 年小白该怎么选？</h3>
+              <p>从写作、编程、读文件、价格和日常工作流出发，给新手一个清晰选择。</p>
+              <div><span>12 分钟</span><span>入门必读</span></div>
+            </a>
+          </article>
+          <article class="article-card" data-category="美股投资" data-title="美股 ETF 定投">
+            <a href="./articles/us-etf-dca.html" class="article-link">
+              <span class="tag">美股投资</span>
+              <h3>美股 ETF 定投 101：小白先买什么，怎么长期坚持？</h3>
+              <p>先理解指数、费用、波动和仓位，再谈收益。适合第一笔美股投资前阅读。</p>
+              <div><span>15 分钟</span><span>课程主线</span></div>
+            </a>
+          </article>
+          <article class="article-card" data-category="自动化" data-title="AI 自动化 工作流">
+            <a href="./articles/ai-workflow.html" class="article-link">
+              <span class="tag">自动化</span>
+              <h3>用 AI 搭一个个人研究工作流：信息收集到成稿</h3>
+              <p>把网页、PDF、笔记和文章大纲串起来，做一个能持续产出的内容系统。</p>
+              <div><span>18 分钟</span><span>实战教程</span></div>
+            </a>
+          </article>
+          <article class="article-card" data-category="出海工具" data-title="香港银行卡 海外手机号">
+            <a href="./articles/global-tools.html" class="article-link">
+              <span class="tag">出海工具</span>
+              <h3>出海工具箱：邮箱、手机号、域名和账户安全怎么配置？</h3>
+              <p>面向小白的基础设施清单，减少注册海外工具时的卡点。</p>
+              <div><span>10 分钟</span><span>清单型</span></div>
+            </a>
+          </article>
+          <article class="article-card" data-category="AI工具" data-title="AI 读财报">
+            <a href="./articles/ai-earnings.html" class="article-link">
+              <span class="tag">AI工具</span>
+              <h3>让 AI 帮你读美股财报：先问这 8 个问题</h3>
+              <p>把财报阅读拆成收入、利润、指引、风险和估值，避免只看标题做判断。</p>
+              <div><span>14 分钟</span><span>投资辅助</span></div>
+            </a>
+          </article>
+          <article class="article-card" data-category="美股投资" data-title="券商开户 入金">
+            <a href="./articles/broker-guide.html" class="article-link">
+              <span class="tag">美股投资</span>
+              <h3>美股券商开户前，新手必须搞懂的 7 件事</h3>
+              <p>账户类型、入金路径、税务表格、交易权限、资金安全和常见误区。</p>
+              <div><span>13 分钟</span><span>开户前</span></div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="videos" id="videos">
+        <div class="section-heading">
+          <p class="eyebrow">YouTube</p>
+          <h2>视频课栏目设计</h2>
+          <p>先把栏目固定下来，后续每条视频都能自然沉淀成一篇博客教程。</p>
+        </div>
+        <div class="video-layout">
+          <div class="video-frame">
+            <div class="play-button" aria-hidden="true"></div>
+            <div>
+              <span>首期视频脚本建议</span>
+              <strong>普通人为什么现在必须学会 AI？</strong>
+              <p>用 3 个真实场景讲清楚：写作、投资研究、自动化。</p>
+            </div>
+          </div>
+          <div class="episode-list">
+            <button type="button" class="episode active">EP01 AI 工具总览：ChatGPT、Claude、Gemini 怎么选</button>
+            <button type="button" class="episode">EP02 美股 ETF：小白第一套长期投资框架</button>
+            <button type="button" class="episode">EP03 用 AI 读财报：从英伟达到苹果</button>
+            <button type="button" class="episode">EP04 个人博客 + X + YouTube 的内容飞轮</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools" id="tools">
+        <div class="section-heading">
+          <p class="eyebrow">Tools</p>
+          <h2>先放一个小工具，增强网站记忆点</h2>
+        </div>
+        <div class="tool-panel">
+          <div>
+            <h3>DCA 定投估算器</h3>
+            <p>这是静态前端计算器，可以继续扩展成“ETF 定投模板”“投资组合追踪”“AI 提示词库”。</p>
+          </div>
+          <form class="calculator" id="dcaForm">
+            <label>每月定投金额 <input name="amount" type="number" value="500" min="0" /></label>
+            <label>年化收益率 <input name="rate" type="number" value="8" min="-50" max="50" /></label>
+            <label>投资年限 <input name="years" type="number" value="10" min="1" max="60" /></label>
+            <output id="dcaResult">10 年后约为 91,473 美元</output>
+          </form>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="about-card">
+          <img class="about-avatar" src="./assets/techgaoshou-avatar.png" alt="高手科技头像" />
+          <div>
+            <p class="eyebrow">About</p>
+            <h2>高手科技</h2>
+            <p>
+              一个面向中文小白的科技与投资学习站。内容会尽量讲人话、讲步骤、讲风险，把复杂工具拆成可执行的清单。
+            </p>
+          </div>
+          <div class="socials">
+            <a href="https://x.com/techgaoshou">X / @techgaoshou</a>
+            <a href="https://www.youtube.com/@techgaoshou">YouTube / @techgaoshou</a>
+            <a href="mailto:hello@techgaoshou.com">hello@techgaoshou.com</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 高手科技 · Tech GaoShou</span>
+      <span>内容仅供学习参考，不构成投资建议。</span>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
