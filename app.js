@@ -100,10 +100,25 @@ const nodes = [
   { x: 0.24, y: 0.62, label: "Workflow" }
 ];
 let tick = 0;
+let canvasCssWidth = 720;
+let canvasCssHeight = 520;
+
+function resizeSignalCanvas() {
+  const rect = canvas.getBoundingClientRect();
+  const ratio = Math.min(window.devicePixelRatio || 1, 2);
+  canvasCssWidth = Math.max(320, rect.width || 720);
+  canvasCssHeight = Math.max(280, rect.height || 520);
+  canvas.width = Math.round(canvasCssWidth * ratio);
+  canvas.height = Math.round(canvasCssHeight * ratio);
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+}
+
+resizeSignalCanvas();
+window.addEventListener("resize", resizeSignalCanvas);
 
 function drawSignal() {
-  const width = canvas.width;
-  const height = canvas.height;
+  const width = canvasCssWidth;
+  const height = canvasCssHeight;
   tick += 0.012;
   ctx.clearRect(0, 0, width, height);
 
@@ -133,7 +148,7 @@ function drawSignal() {
     ctx.arc(x, y, 7, 0, Math.PI * 2);
     ctx.fill();
     ctx.fillStyle = "rgba(255, 248, 232, 0.86)";
-    ctx.font = "700 18px system-ui, sans-serif";
+    ctx.font = `${width < 460 ? "700 14px" : "700 18px"} system-ui, sans-serif`;
     ctx.fillText(node.label, x + 13, y + 6);
   });
 

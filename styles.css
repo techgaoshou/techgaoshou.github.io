@@ -173,7 +173,7 @@ p {
 
 h1 {
   max-width: 12ch;
-  margin: 0;
+  margin: 1.15rem 0 0;
   font-size: clamp(3.2rem, 7vw, 6.8rem);
   line-height: 0.95;
   letter-spacing: 0;
@@ -202,10 +202,95 @@ h3 {
 .hero-actions,
 .hero-stats,
 .filters,
+.social-ribbon,
 .socials {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.hero-creator {
+  margin: 0 0 1.1rem;
+}
+
+.hero-creator span {
+  display: grid;
+  line-height: 1.25;
+}
+
+.hero-creator strong {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.hero-creator small {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.social-ribbon {
+  margin-top: 1.4rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 9.2rem;
+  padding: 0.58rem 0.72rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--panel-strong) 88%, transparent);
+  box-shadow: 0 12px 32px rgba(17, 24, 32, 0.08);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--line));
+  box-shadow: 0 18px 38px rgba(17, 24, 32, 0.12);
+}
+
+.social-icon {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.social-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
+.x-link .social-icon {
+  background: #111820;
+}
+
+.youtube-link .social-icon {
+  background: #ff0033;
+}
+
+.telegram-link .social-icon {
+  background: #28a8ea;
+}
+
+.social-link strong,
+.social-link small {
+  display: block;
+  line-height: 1.25;
+}
+
+.social-link small {
+  color: var(--muted);
+  font-size: 0.78rem;
 }
 
 .hero-actions {
@@ -272,7 +357,8 @@ h3 {
 
 .hero-visual {
   position: relative;
-  min-height: 32rem;
+  aspect-ratio: 1.38;
+  min-height: 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -286,7 +372,6 @@ h3 {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 32rem;
 }
 
 .signal-panel {
@@ -724,21 +809,63 @@ section {
 
   .hero {
     min-height: auto;
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
+    gap: 1.5rem;
   }
 
   h1 {
-    max-width: 10ch;
-    font-size: clamp(2.85rem, 13vw, 3.45rem);
+    max-width: 12ch;
+    font-size: clamp(2.35rem, 11vw, 3.1rem);
+    line-height: 1;
   }
 
   .hero-text {
     font-size: 1rem;
   }
 
-  .hero-visual,
-  #signalCanvas {
-    min-height: 24rem;
+  .social-ribbon {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .social-link {
+    min-width: 0;
+    justify-content: center;
+    padding: 0.55rem 0.35rem;
+  }
+
+  .social-link span:last-child {
+    display: none;
+  }
+
+  .social-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  .primary-action,
+  .secondary-action {
+    padding-right: 0.65rem;
+    padding-left: 0.65rem;
+  }
+
+  .hero-visual {
+    aspect-ratio: 1.08;
+  }
+
+  .signal-panel {
+    padding: 0.85rem;
+  }
+
+  .signal-panel strong {
+    font-size: 1.05rem;
   }
 
   .hero-stats span,
