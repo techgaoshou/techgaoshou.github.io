@@ -84,7 +84,7 @@ input {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 1rem;
   min-width: max-content;
 }
 
@@ -100,12 +100,14 @@ input {
 }
 
 .brand-avatar {
-  width: 3.7rem;
-  height: 3.7rem;
-  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  width: 5.2rem;
+  height: 5.2rem;
+  border: 2px solid color-mix(in srgb, var(--accent) 45%, var(--line));
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--panel) 70%, transparent);
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--panel) 78%, transparent),
+    0 12px 28px rgba(17, 24, 32, 0.12);
 }
 
 .brand strong,
@@ -779,8 +781,8 @@ section {
   }
 
   .brand-avatar {
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
   .main-nav {
