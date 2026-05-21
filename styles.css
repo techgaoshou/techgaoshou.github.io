@@ -102,11 +102,11 @@ input {
 .brand-avatar {
   width: 5.2rem;
   height: 5.2rem;
-  border: 2px solid color-mix(in srgb, var(--accent) 45%, var(--line));
-  border-radius: 8px;
+  border: 2px solid color-mix(in srgb, var(--accent) 50%, var(--line));
+  border-radius: 50%;
   object-fit: cover;
   box-shadow:
-    0 0 0 3px color-mix(in srgb, var(--panel) 78%, transparent),
+    0 0 0 2px color-mix(in srgb, var(--panel) 78%, transparent),
     0 12px 28px rgba(17, 24, 32, 0.12);
 }
 
