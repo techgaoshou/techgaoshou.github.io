@@ -85,7 +85,7 @@ input {
   display: flex;
   align-items: center;
   gap: 1rem;
-  min-width: max-content;
+  min-width: 0;
 }
 
 .brand-mark {
@@ -113,6 +113,21 @@ input {
 .brand strong,
 .brand small {
   display: block;
+}
+
+.brand strong {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.12rem;
+  line-height: 1.25;
+}
+
+.brand-divider,
+.brand-tagline {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .brand small {
@@ -778,6 +793,25 @@ section {
   .site-header {
     align-items: flex-start;
     flex-wrap: wrap;
+  }
+
+  .site-header .icon-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .brand {
+    width: 100%;
+    padding-right: 3rem;
+  }
+
+  .brand-divider {
+    display: none;
+  }
+
+  .brand-tagline {
+    flex-basis: 100%;
   }
 
   .brand-avatar {
