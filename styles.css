@@ -189,10 +189,10 @@ p {
 }
 
 h1 {
-  max-width: 12ch;
+  max-width: 13.5ch;
   margin: 1.15rem 0 0;
-  font-size: clamp(3.2rem, 7vw, 6.8rem);
-  line-height: 0.95;
+  font-size: clamp(2.75rem, 5.1vw, 4.85rem);
+  line-height: 1.04;
   letter-spacing: 0;
 }
 
@@ -844,9 +844,9 @@ section {
   }
 
   h1 {
-    max-width: 12ch;
-    font-size: clamp(2.35rem, 11vw, 3.1rem);
-    line-height: 1;
+    max-width: 13.5ch;
+    font-size: clamp(2.05rem, 8.6vw, 2.65rem);
+    line-height: 1.08;
   }
 
   .hero-text {
